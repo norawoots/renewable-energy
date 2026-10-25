@@ -3,14 +3,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const page = document.getElementById("page-content");
 
-    // Animate the new page in, based on the previous navigation direction
     const direction = sessionStorage.getItem("pageDirection");
     sessionStorage.removeItem("pageDirection");
 
-    if (page && direction === "next") {
-        page.classList.add("fly-in-from-right");
-    } else if (page && direction === "back") {
-        page.classList.add("fly-in-from-left");
+    if (page) {
+        // Set the entrance animation before revealing the content
+        if (direction === "next") {
+            page.classList.add("fly-in-from-right");
+        } else if (direction === "back") {
+            page.classList.add("fly-in-from-left");
+        }
+
+        // Reveal the page only after its animation is configured
+        page.classList.add("page-ready");
     }
 
     // Set up every Next and Back button on the page

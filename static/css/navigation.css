@@ -1,71 +1,51 @@
+/* From ChatGPT to add navigation animation logic */
 
-/* Shared animation settings */
+/* Hide the page until JavaScript sets its entrance state */
 #page-content {
-    animation-duration: 0.8s;
+    visibility: hidden;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
 }
 
-/* NEXT: current page exits left */
-.fly-out-to-left {
-    animation-name: flyOutLeft;
+/* Reveal the page after its animation state is ready */
+#page-content.page-ready {
+    visibility: visible;
 }
 
-/* NEXT: destination page enters from right */
+/* Entrance and exit animations */
 .fly-in-from-right {
     animation-name: flyInRight;
 }
 
-/* BACK: current page exits right */
-.fly-out-to-right {
-    animation-name: flyOutRight;
-}
-
-/* BACK: destination page enters from left */
 .fly-in-from-left {
     animation-name: flyInLeft;
 }
 
-@keyframes flyOutLeft {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-120vw);
-        opacity: 0;
-    }
+.fly-out-to-left {
+    animation-name: flyOutLeft;
+}
+
+.fly-out-to-right {
+    animation-name: flyOutRight;
 }
 
 @keyframes flyInRight {
-    from {
-        transform: translateX(120vw);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes flyOutRight {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(120vw);
-        opacity: 0;
-    }
+    from { transform: translateX(100vw); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes flyInLeft {
-    from {
-        transform: translateX(-120vw);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(-100vw); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes flyOutLeft {
+    from { transform: translateX(0); opacity: 1; }
+    to   { transform: translateX(-100vw); opacity: 0; }
+}
+
+@keyframes flyOutRight {
+    from { transform: translateX(0); opacity: 1; }
+    to   { transform: translateX(100vw); opacity: 0; }
 }
