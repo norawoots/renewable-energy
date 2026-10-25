@@ -1,0 +1,66 @@
+
+:root {
+    /* Main colors */
+    --blue-slate: #646F78;
+    --lavender: #C6D3E9;
+    --carbon-black: #161910;
+    --wisteria-blue: #7A99C3;
+    --olive-leaf: #545B0B;
+    --olive-leaf-2: #39491C;
+    --dark-khaki: #4A3D1B;
+
+    /* Gradients */
+    --gradient-top: linear-gradient(
+        0deg,
+        var(--blue-slate),
+        var(--lavender),
+        var(--carbon-black),
+        var(--wisteria-blue),
+        var(--olive-leaf),
+        var(--olive-leaf-2),
+        var(--dark-khaki)
+    );
+
+    --gradient-right: linear-gradient(
+        90deg,
+        var(--blue-slate),
+        var(--lavender),
+        var(--carbon-black),
+        var(--wisteria-blue),
+        var(--olive-leaf),
+        var(--olive-leaf-2),
+        var(--dark-khaki)
+    );
+
+    --gradient-bottom: linear-gradient(
+        180deg,
+        var(--blue-slate),
+        var(--lavender),
+        var(--carbon-black),
+        var(--wisteria-blue),
+        var(--olive-leaf),
+        var(--olive-leaf-2),
+        var(--dark-khaki)
+    );
+
+    --gradient-left: linear-gradient(
+        270deg,
+        var(--blue-slate),
+        var(--lavender),
+        var(--carbon-black),
+        var(--wisteria-blue),
+        var(--olive-leaf),
+        var(--olive-leaf-2),
+        var(--dark-khaki)
+    );
+
+    --gradient-radial: radial-gradient(
+        var(--blue-slate),
+        var(--lavender),
+        var(--carbon-black),
+        var(--wisteria-blue),
+        var(--olive-leaf),
+        var(--olive-leaf-2),
+        var(--dark-khaki)
+    );
+}

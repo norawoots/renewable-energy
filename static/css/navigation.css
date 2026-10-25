@@ -1,0 +1,71 @@
+
+/* Shared animation settings */
+#page-content {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+/* NEXT: current page exits left */
+.fly-out-to-left {
+    animation-name: flyOutLeft;
+}
+
+/* NEXT: destination page enters from right */
+.fly-in-from-right {
+    animation-name: flyInRight;
+}
+
+/* BACK: current page exits right */
+.fly-out-to-right {
+    animation-name: flyOutRight;
+}
+
+/* BACK: destination page enters from left */
+.fly-in-from-left {
+    animation-name: flyInLeft;
+}
+
+@keyframes flyOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-120vw);
+        opacity: 0;
+    }
+}
+
+@keyframes flyInRight {
+    from {
+        transform: translateX(120vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes flyOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(120vw);
+        opacity: 0;
+    }
+}
+
+@keyframes flyInLeft {
+    from {
+        transform: translateX(-120vw);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
