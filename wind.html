@@ -9,12 +9,59 @@
 </head>
 <body>
         <div id="page-content">
-            <div class="top-buffer"></div>
-            <h1 class="retro-text">Solar Energy</h1>
+            <div class="mid-buffer"></div>
+            <h2 class="retro-text">Wind Energy</h2>
+            <div class="display-box">
+                <div class="centered-box">
+                    <h4>Some information about wind energy that is helpful... explain relation between blade length and wind speed etc??</h4>
+                </div>
+            </div>
 
-            <button data-next="wind.html">
-                NEXT
-            </button>
+            <div class="display-box">
+                <div class="game-box">
+                    <div class="controls-section">
+                        <div class="animation-container">
+                            <h3>Wind Turbine Controls</h3>
+                            <label for="windSpeed">
+                                Wind Speed: <span id="windSpeedValue">10</span> m/s
+                            </label>
+                            <input type="range" id="windSpeed" min="0" max="30" value="10" step="1">
+                        </div>
+                        <div class="animation-container">
+                            <label for="bladeLength">
+                                Blade Length: <span id="bladeLengthValue">60</span> px
+                            </label>
+                            <input type="range" id="bladeLength" min="20" max="100" value="60" step="1">
+                        </div>
+                        <div class="equations-box">
+                            <h4>stuf stufff</h4>
+                        </div>
+                    </div>
+                    <div class="turbine-section">
+                        <div class="turbine-container">
+                            <div class="blade-wrapper">
+                                <div class="hub"></div>
+                                <div class="blade blade-1"></div>
+                                <div class="blade blade-2"></div>
+                                <div class="blade blade-3"></div>
+                            </div>
+
+                            <div class="tower"></div>
+                            <div class="ground"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-box">
+                <button data-back="solar.html" class="retro-text button-text">
+                    BACK
+                </button>
+                <button data-next="wind.html" class="retro-text button-text">
+                    NEXT
+                </button>
+            </div>
+            
         </div>
 
         <script src="static/js/navigation.js"></script>

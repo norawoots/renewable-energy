@@ -2,22 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url("colors.css");
 @import url("navigation.css");
+@import url("turbine.css");
 
 /* Body styling */
 body {
     background-color: var(--blue-slate);
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Text styling */
 h1 {
     font-size: 6vh;
     color: var(--olive-leaf-2);
+    text-shadow: 2px 2px 0px #000000;
 }
 
 h2 {
     font-size: 4vh;
     color: var(--olive-leaf);
+    text-shadow: 2px 2px 0px #000000;
 }
 
 h3 {
@@ -25,18 +29,70 @@ h3 {
     color: var(--dark-khaki);
 }
 
+h4 {
+    font-size: 2vh;
+    color: var(--carbon-black);
+}
+
+/* Energy explanation text */
+.display-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+}
+
+.centered-box {
+  width: 60vw;
+}
+
+.game-box {
+    background-color: var(--gray-slate);
+    width: 80vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: hidden;
+}
+
+.turbine-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-width: 0;
+}
+
+.controls-section {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 16px;
+    padding: 20px;
+    min-width: 0;
+}
+
 /* Button styling */
 .button-text {
-    font-size: 3vh;
+    font-size: 2vh;
     color: var(--wisteria-blue);
+    background-color: var(--lavender);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
 }
 
 .floating-button {
+    font-size: 3vh;
     position: relative;
     animation: float 1s ease-in-out infinite alternate;
-    cursor: pointer;
     padding: 15px;
-    background-color: var(--lavender);
 }
 
 @keyframes float {
@@ -51,11 +107,14 @@ h3 {
 /* Other */
 .retro-text {
     font-family: 'Press Start 2P', monospace;
-    text-shadow: 2px 2px 0px #000000;
     image-rendering: pixelated;
     -webkit-font-smoothing: none;
 }
 
 .top-buffer {
     padding-bottom: 15vh;
+}
+
+.mid-buffer {
+    padding-bottom: 3vh;
 }

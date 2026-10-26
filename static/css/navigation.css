@@ -3,7 +3,7 @@
 /* Hide the page until JavaScript sets its entrance state */
 #page-content {
     visibility: hidden;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
 }

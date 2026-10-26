@@ -1,0 +1,92 @@
+@import url("colors.css");
+
+.turbine-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tower Pole */
+.tower {
+  width: 10px;
+  height: 140px;
+  background-color: #353836;
+  position: relative;
+  z-index: 1;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+}
+
+.ground {
+  width: 100%;
+  height: 20px;
+  justify-content: flex-end;
+  background-color: darkolivegreen;
+  position: relative;
+  z-index: 1;
+  clip-path: ellipse(50% 100% at 50% 100%);
+}
+
+/* Blade Wrapper - Rotates Continuously */
+
+/* Blade Wrapper - Rotates continuously at the top of the tower */
+.blade-wrapper {
+  position: flex;
+  top: 0;
+  left: 40px;
+  width: 120px;
+  height: 10px;
+  z-index: 2;
+  animation: spin 4s linear infinite;
+}
+
+/* Center Hub */
+.hub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(135, 88, 72);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+/* Individual Blades */
+.blade {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 60px;
+  background-color: darksalmon;
+  border-radius: 3px;
+  transform-origin: 50% 0%; /* Anchor rotation at the top of the blade */
+}
+
+/* Position the 3 blades at 120-degree intervals */
+.blade-1 {
+  transform: translate(-50%, 0%) rotate(0deg);
+}
+
+.blade-2 {
+  transform: translate(-50%, 0%) rotate(120deg);
+}
+
+.blade-3 {
+  transform: translate(-50%, 0%) rotate(240deg);
+}
+
+/* Keyframes for smooth continuous spinning */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
